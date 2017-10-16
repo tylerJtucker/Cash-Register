@@ -69,7 +69,7 @@
             this.riflesInput.Location = new System.Drawing.Point(217, 53);
             this.riflesInput.Name = "riflesInput";
             this.riflesInput.Size = new System.Drawing.Size(43, 20);
-            this.riflesInput.TabIndex = 2;
+            this.riflesInput.TabIndex = 1;
             // 
             // pistolsLabel
             // 
@@ -87,7 +87,7 @@
             this.pistolsInput.Location = new System.Drawing.Point(217, 107);
             this.pistolsInput.Name = "pistolsInput";
             this.pistolsInput.Size = new System.Drawing.Size(43, 20);
-            this.pistolsInput.TabIndex = 4;
+            this.pistolsInput.TabIndex = 2;
             // 
             // rpgLabel
             // 
@@ -105,7 +105,7 @@
             this.rpgInput.Location = new System.Drawing.Point(217, 156);
             this.rpgInput.Name = "rpgInput";
             this.rpgInput.Size = new System.Drawing.Size(43, 20);
-            this.rpgInput.TabIndex = 6;
+            this.rpgInput.TabIndex = 3;
             // 
             // totalButton
             // 
@@ -117,7 +117,7 @@
             this.totalButton.Location = new System.Drawing.Point(60, 197);
             this.totalButton.Name = "totalButton";
             this.totalButton.Size = new System.Drawing.Size(200, 31);
-            this.totalButton.TabIndex = 7;
+            this.totalButton.TabIndex = 4;
             this.totalButton.Text = "Calculate Total";
             this.totalButton.UseVisualStyleBackColor = false;
             this.totalButton.Click += new System.EventHandler(this.totalButton_Click);
@@ -198,7 +198,7 @@
             this.changeButton.Location = new System.Drawing.Point(60, 449);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(200, 31);
-            this.changeButton.TabIndex = 14;
+            this.changeButton.TabIndex = 6;
             this.changeButton.Text = "Change";
             this.changeButton.UseVisualStyleBackColor = false;
             this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
@@ -238,7 +238,7 @@
             this.tenderedInput.Location = new System.Drawing.Point(158, 414);
             this.tenderedInput.Name = "tenderedInput";
             this.tenderedInput.Size = new System.Drawing.Size(102, 20);
-            this.tenderedInput.TabIndex = 18;
+            this.tenderedInput.TabIndex = 5;
             // 
             // changeLabel
             // 
@@ -261,7 +261,7 @@
             this.reciptButton.Location = new System.Drawing.Point(354, 435);
             this.reciptButton.Name = "reciptButton";
             this.reciptButton.Size = new System.Drawing.Size(200, 31);
-            this.reciptButton.TabIndex = 20;
+            this.reciptButton.TabIndex = 7;
             this.reciptButton.Text = "Print Recipt";
             this.reciptButton.UseVisualStyleBackColor = false;
             this.reciptButton.Click += new System.EventHandler(this.reciptButton_Click);
@@ -276,7 +276,7 @@
             this.newButton.Location = new System.Drawing.Point(354, 480);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(200, 31);
-            this.newButton.TabIndex = 21;
+            this.newButton.TabIndex = 8;
             this.newButton.Text = "New Order";
             this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
@@ -321,6 +321,7 @@
             this.Controls.Add(this.pistolsLabel);
             this.Controls.Add(this.riflesInput);
             this.Controls.Add(this.RifleLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "bapeForm";
             this.Text = "Bape Cash";
             this.Deactivate += new System.EventHandler(this.bapeForm_Deactivate);

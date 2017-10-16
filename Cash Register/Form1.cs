@@ -1,4 +1,10 @@
-﻿using System;  
+﻿//Tyler Tucker
+//October 16, 2017
+//This code is a cash register system that takes inputs of amouts of products, and outputs prices, change, and recipts
+
+
+
+using System;  
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;  
@@ -42,7 +48,7 @@ namespace Cash_Register
         {
             InitializeComponent();
             reciptButton.Visible = false;
-            riflesInput.Text = Convert.ToString (0);
+            riflesInput.Text = Convert.ToString (0);     //sets everthing to 0
             pistolsInput.Text = Convert.ToString(0);
             rpgInput.Text = Convert.ToString(0);
             tenderedInput.Text = Convert.ToString(0);
@@ -76,7 +82,6 @@ namespace Cash_Register
                 Refresh();
                 Thread.Sleep(2000);
                 errorMessage.Text = "";
-                return;
             }
         }
 
@@ -120,30 +125,34 @@ namespace Cash_Register
             Printer.Play();
             fg.FillRectangle(drawBrush, 327, 43, 250, 375);                                //plays sound, makes recpit
             fg.DrawString("Bape Guns", drawFontTitle, drawBrushWrite, 415, 65);
-            Thread.Sleep(600);
+            Thread.Sleep(500);
             fg.DrawString("123 Whocares St", drawFontAddress, drawBrushWrite, 418, 85);
-            Thread.Sleep(600);
+            Thread.Sleep(500);
 
             if (numberRifles > 0)
-                fg.DrawString(numberRifles + "x  Rifles" + "                          " + (numberRifles * COST_RIFLES).ToString("C"), drawFontProducts, drawBrushWrite, 375, 150);
-            Thread.Sleep(600);
+                fg.DrawString(numberRifles + "x  Rifles" + "                        @" + COST_RIFLES.ToString("C"), drawFontProducts, drawBrushWrite, 375, 150);
+            Thread.Sleep(500);
 
             if (numberPistols > 0)
-                fg.DrawString(numberPistols + "x  Pistols" + "                        " + (numberPistols * COST_PISTOLS).ToString("C"), drawFontProducts, drawBrushWrite, 375, 170);
-            Thread.Sleep(600);
+                fg.DrawString(numberPistols + "x  Pistols" + "                      @" + COST_PISTOLS.ToString("C"), drawFontProducts, drawBrushWrite, 375, 170);
+            Thread.Sleep(500);
 
             if (numberRpg > 0)
-                fg.DrawString(numberRpg + "x  RPGs" + "                            " + (numberRpg * COST_RPG).ToString("C"), drawFontProducts, drawBrushWrite, 375, 190);
-            Thread.Sleep(600);
+                fg.DrawString(numberRpg + "x  RPGs" + "                          @" + COST_RPG.ToString("C"), drawFontProducts, drawBrushWrite, 375, 190);
+            Thread.Sleep(500);
 
             fg.DrawString("-------------------------------------------------------------", drawFontProducts, drawBrushWrite, 355, 210);
-            Thread.Sleep(650);
+            Thread.Sleep(500);
             fg.DrawString("Subtotal:   " + subtotal.ToString("C"), drawFontProducts, drawBrushWrite, 355, 230);
-            Thread.Sleep(650);
+            Thread.Sleep(500);
             fg.DrawString("Tax:  " + taxOfSold.ToString("C"), drawFontProducts, drawBrushWrite, 355, 250);
-            Thread.Sleep(650);
+            Thread.Sleep(500);
             fg.DrawString("Total:  " + total.ToString("C"), drawFontProducts, drawBrushWrite, 355, 270);
-            Thread.Sleep(650);
+            Thread.Sleep(500);
+            fg.DrawString("Tendered:  " + tendered.ToString("C"), drawFontProducts, drawBrushWrite, 355, 290);
+            Thread.Sleep(500);
+            fg.DrawString("Change:  " + change.ToString("C"), drawFontProducts, drawBrushWrite, 355, 310);
+            Thread.Sleep(500);
             fg.DrawString("Thanks for your money", drawFontProducts, drawBrushWrite, 393, 340);
         }
 
@@ -154,7 +163,7 @@ namespace Cash_Register
             riflesInput.Text = Convert.ToString(0);
             pistolsInput.Text = Convert.ToString(0);
             rpgInput.Text = Convert.ToString(0);
-            tenderedInput.Text = Convert.ToString(0);
+            tenderedInput.Text = Convert.ToString(0);     //clears outputs
             subtotalOutput.Text = "";
             taxOutput.Text = "";
             totalOutput.Text = "";
@@ -164,7 +173,7 @@ namespace Cash_Register
 
         private void bapeForm_Deactivate(object sender, EventArgs e)
         {
-            Stopit.PlaySync();
+            Stopit.PlaySync(); //plays sound
         }
         
     }
